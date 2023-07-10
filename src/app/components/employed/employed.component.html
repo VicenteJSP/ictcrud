@@ -1,0 +1,20 @@
+<form [formGroup]="formEmployed" (submit)="save()">
+  <div class="mb-3">
+    <label for="nameEmployed" class="form-label">Name</label>
+    <input class="form-control" id="nameEmployed" formControlName="employedName">
+  </div>
+  <div class="mb-3">
+    <label for="dateEmployed" class="form-label">Date</label>
+    <input class="form-control" id="dateEmployed" formControlName="date">
+  </div>
+  <div class="mb-3">
+    <label for="punchIn" class="form-label">Punch In</label>
+    <input class="form-control" id="punchIn" formControlName="punchIn">
+  </div>
+  <div class="mb-3">
+    <label for="punchOut" class="form-label">Punch Out</label>
+    <input class="form-control" id="punchOut" formControlName="punchOut">
+  </div>
+  <button type="submit" class="btn btn-primary">{{ _id ? 'Edit' : 'Save' }}</button>
+  <button type="button" class="btn btn-light mx-2" (click)="back()">Back</button>
+</form>
